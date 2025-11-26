@@ -11,9 +11,12 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      
       debugShowCheckedModeBanner: false,
       theme: appTheme,
-      home: Scaffold(body: Center(child: Text('Hello World!'))),
+      home: Scaffold(
+          appBar: AppBar(title: Text('Posts App')),
+        body: Center(child: Text('Hello World!'))),
     );
   }
 }
