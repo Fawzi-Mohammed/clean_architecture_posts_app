@@ -33,9 +33,7 @@ Future<void> init() async {
   sl.registerLazySingleton(() => GetAllPostsUseCase(repositories: sl.call()));
   sl.registerLazySingleton(() => AddPostUseCase(repositories: sl.call()));
   sl.registerLazySingleton(() => UpdatePostUseCase(repositories: sl.call()));
-  sl.resetLazySingleton(
-    instance: () => DeletePostUseCase(repositories: sl.call()),
-  );
+  sl.registerLazySingleton(() => DeletePostUseCase(repositories: sl.call()));
 
   //Repository
   sl.registerLazySingleton<PostsRepositories>(
