@@ -25,7 +25,7 @@ A friendly Flutter CRUD demo that shows how clean architecture feels in a small 
 
 ## Configuration notes
 
-- API base: https://jsonplaceholder.typicode.com
+- API base: <https://jsonplaceholder.typicode.com>
 - Cached posts key: `CACHED_POSTS` (see `post_local_data_sources.dart`).
 - Connectivity checks rely on `internet_connection_checker`.
 
