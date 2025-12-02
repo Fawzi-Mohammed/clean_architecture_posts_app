@@ -1,4 +1,5 @@
 import 'package:clean_architecture/features/posts/domain/enities/post.dart';
+import 'package:clean_architecture/features/posts/presentation/pages/post_detail_page.dart';
 import 'package:flutter/material.dart';
 
 class PostListWidget extends StatelessWidget {
@@ -9,7 +10,14 @@ class PostListWidget extends StatelessWidget {
     return ListView.separated(
       itemBuilder: (context, index) {
         return ListTile(
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => PostDetailPage(post: posts[index]),
+              ),
+            );
+          },
           contentPadding: EdgeInsets.symmetric(horizontal: 10),
           leading: Text(posts[index].id.toString()),
           title: Text(
